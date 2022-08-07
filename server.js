@@ -1,5 +1,5 @@
 require("dotenv").config();
-//hello
+
 const express = require("express");
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
@@ -17,7 +17,7 @@ app.use(
   })
 );
 
-//add async back in before req, res
+
 app.post("/create_checkout_session", async (req, res) => {
 try{
   const session = await stripe.checkout.sessions.create({
